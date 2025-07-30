@@ -35,14 +35,14 @@ const Hero = () => {
           healthcare access to the underprivileged. Registered in Delhi | A
           Section 8 Company under the Companies Act, 2013
         </p>
-        <div className="flex items-center justify-center md:gap-4 gap-3 relative">
-          <button className="bg-white text-accent rounded-full md:px-14 px-4 md:py-3 py-2 flex items-center justify-center gap-2">
+        <div className="flex items-center justify-center md:gap-4 gap-2 relative">
+          <button className="md:text-base text-sm bg-white text-accent rounded-full md:px-14 px-4 md:py-3 py-2 flex items-center justify-center gap-2">
             ● Donate Now
           </button>
-          <button className="border border-white rounded-full md:px-14 px-4 md:py-3 py-2 flex items-center justify-center gap-2">
+          <button className="md:text-base text-sm border border-white rounded-full md:px-14 px-4 md:py-3 py-2 flex items-center justify-center gap-2">
             ● Join Us
           </button>
-          <button className="border border-white rounded-full md:px-14 px-4 md:py-3 py-2 flex items-center justify-center gap-2">
+          <button className="md:text-base text-sm border border-white rounded-full md:px-14 px-4 md:py-3 py-2 flex items-center justify-center gap-2">
             ● Volunteer
           </button>
           <div className="md:block hidden absolute top-5 -right-20">

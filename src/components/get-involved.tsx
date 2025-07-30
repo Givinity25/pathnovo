@@ -45,10 +45,12 @@ export default function GetInvolved() {
               key={idx}
               className="flex flex-col items-start border-t border-gray-300 pt-6 w-full"
             >
-              <h3 className="text-xl font-semibold mb-2 h-12 flex items-start">
-                {item.title}
-              </h3>
-              <p className="text-gray-600 text-sm mb-4">{item.description}</p>
+              <div className="flex flex-col items-start h-[130px] md:h-[150px]">
+                <h3 className="text-xl font-semibold mb-2 h-12 flex items-start">
+                  {item.title}
+                </h3>
+                <p className="text-gray-600 text-sm mb-4">{item.description}</p>
+              </div>
 
               {item.image && (
                 <img

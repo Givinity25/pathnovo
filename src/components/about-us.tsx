@@ -34,15 +34,15 @@ const AboutUs = () => {
         </div>
 
         <div className="mt-10 bg-white  rounded-xl p-2 flex items-center justify-center gap-4 md:max-w-[600px] w-full">
-          <button className="bg-accent text-white w-full rounded-xl py-2 px-2 flex items-center justify-start gap-2 text-sm">
+          <button className="bg-accent text-white w-full rounded-xl py-2 px-2 flex items-center justify-start gap-2 md:text-sm text-xs">
             <Compass color="white" width={16} height={16} />
             <p>Our Mission</p>
           </button>
-          <button className="w-full rounded-xl py-1 flex items-center justify-start gap-2 text-sm">
+          <button className="w-full rounded-xl py-1 flex items-center justify-start gap-2 md:text-sm text-xs">
             <Eye width={16} height={16} />
             Our Visions
           </button>
-          <button className="w-full rounded-xl py-1 flex items-center justify-start gap-2 text-sm">
+          <button className="w-full rounded-xl py-1 flex items-center justify-start gap-2 md:text-sm text-xs">
             <ChartPie width={16} height={16} />
             Our Goals
           </button>

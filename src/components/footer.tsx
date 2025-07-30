@@ -1,8 +1,8 @@
 const Footer = () => {
   return (
     <div className="w-full flex flex-col items-center justify-center gap-4 bg-black text-white">
-      <div className="flex flex-col items-center justify-center gap-6 max-w-6xl w-full md:pt-40 pt-20 pb-10">
-        <p className="text-sm md:mb-6">Get in touch</p>
+      <div className="flex flex-col items-center justify-center gap-6 max-w-6xl w-full md:pt-40 pt-20 pb-10 px-4">
+        <p className="text-sm md:mb-6 italic">Get in touch</p>
         <p className="md:text-5xl text-3xl text-center">
           We’d Love to Hear from You
         </p>

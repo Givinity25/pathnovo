@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 const involvementOptions = [
   {
     title: 'Volunteer',
@@ -60,9 +62,12 @@ export default function GetInvolved() {
                 />
               )}
 
-              <button className="mt-auto bg-accent hover:bg-accent/90 text-white px-5 py-2 rounded-full text-sm font-medium">
-                ● {item.cta}
-              </button>
+              <Link
+                href="/coming-soon"
+                className="px-5 py-2 bg-accent hover:bg-red-500 transition-colors text-white hidden md:flex items-center justify-center gap-4 rounded-full text-sm"
+              >
+                <span className="w-2 h-2 bg-white rounded-full" /> Donate Now
+              </Link>
             </div>
           ))}
         </div>

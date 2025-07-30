@@ -1,5 +1,6 @@
 import { Heart, BookOpen, Users, ThumbsUp } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const focusAreas = [
   {
@@ -48,9 +49,12 @@ export default function FocusAreas() {
               infrastructure are designed to turn raw ideas into thriving,
               sustainable ventures.
             </p>
-            <button className="bg-accent hover:bg-accent/90 text-white px-5 py-2 rounded-full font-medium">
-              ● Donate Now
-            </button>
+            <Link
+              href="/coming-soon"
+              className="px-10 py-3 bg-accent hover:bg-red-500 transition-colors text-white hidden md:flex items-center justify-center gap-4 rounded-full"
+            >
+              <span className="w-2 h-2 bg-white rounded-full" /> Donate Now
+            </Link>
           </div>
 
           <div className="relative flex-shrink-0 w-full h-[300px] rounded-2xl overflow-hidden md:mt-10">

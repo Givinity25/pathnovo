@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 const Footer = () => {
   return (
     <div className="w-full flex flex-col items-center justify-center gap-4 bg-black text-white">
@@ -10,9 +12,12 @@ const Footer = () => {
           We&apos;re here to assist you with any questions, support, or
           partnership inquiries – reach out to us today.
         </p>
-        <button className="mt-6 px-10 py-3 bg-white text-black flex items-center justify-center gap-4 rounded-full">
+        <Link
+          href="/coming-soon"
+          className="mt-6 px-10 py-3 bg-white text-black flex items-center justify-center gap-4 rounded-full cursor-pointer"
+        >
           <span className="w-2 h-2 bg-black rounded-full" /> Contact Us
-        </button>
+        </Link>
 
         <div className="w-full h-[1px] bg-white/70 mt-8" />
 

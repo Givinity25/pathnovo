@@ -1,4 +1,6 @@
+'use client';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Hero = () => {
   return (
@@ -36,15 +38,19 @@ const Hero = () => {
           Section 8 Company under the Companies Act, 2013
         </p>
         <div className="flex items-center justify-center md:gap-4 gap-2 relative">
-          <button className="md:text-base text-sm bg-white text-accent rounded-full md:px-14 px-4 md:py-3 py-2 flex items-center justify-center gap-2">
-            ● Donate Now
-          </button>
-          <button className="md:text-base text-sm border border-white rounded-full md:px-14 px-4 md:py-3 py-2 flex items-center justify-center gap-2">
-            ● Join Us
-          </button>
-          <button className="md:text-base text-sm border border-white rounded-full md:px-14 px-4 md:py-3 py-2 flex items-center justify-center gap-2">
-            ● Volunteer
-          </button>
+          {[
+            { label: '● Donate Now' },
+            { label: '● Join Us' },
+            { label: '● Volunteer' },
+          ].map((btn, idx) => (
+            <Link
+              key={btn.label}
+              className="md:text-base text-sm hover:bg-white hover:text-accent border border-white rounded-full md:px-14 px-4 md:py-3 py-2 flex items-center justify-center gap-2 transition-all duration-200 hover:shadow-lg cursor-pointer"
+              href="/coming-soon"
+            >
+              {btn.label}
+            </Link>
+          ))}
           <div className="md:block hidden absolute top-5 -right-20">
             <Image
               src="/hero-right-image.png"

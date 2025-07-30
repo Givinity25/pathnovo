@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function CallToActionBanner() {
   return (
     <div className="w-full flex items-center justify-center">
@@ -14,9 +16,14 @@ export default function CallToActionBanner() {
               We help thousands of children, arrange food & build houses for
               them.
             </p>
-            <button className="bg-accent hover:bg-accent/90 text-white px-6 py-2 rounded-full font-medium">
-              ● Donate Now
-            </button>
+            <div className="flex items-start">
+              <Link
+                href="/coming-soon"
+                className="px-10 py-3 bg-accent hover:bg-red-500 transition-colors text-white hidden md:flex items-center justify-center gap-4 rounded-full mr-auto"
+              >
+                <span className="w-2 h-2 bg-white rounded-full" /> Donate Now
+              </Link>
+            </div>
           </div>
         </div>
       </section>

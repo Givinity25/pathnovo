@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 const Objectives = [
   {
     title: 'Promote prayers for peace, harmony and well-being of everyone',
@@ -39,9 +41,12 @@ const Objective = () => {
             </p>
           </div>
 
-          <button className="px-10 py-3 bg-accent text-white hidden md:flex items-center justify-center gap-4 rounded-full">
+          <Link
+            href="/coming-soon"
+            className="px-10 py-3 bg-accent hover:bg-red-500 transition-colors text-white hidden md:flex items-center justify-center gap-4 rounded-full"
+          >
             <span className="w-2 h-2 bg-white rounded-full" /> Donate Now
-          </button>
+          </Link>
         </div>
 
         <div className="w-full mt-4 md:flex md:justify-center md:gap-4 grid grid-cols-2 gap-4">

@@ -1,6 +1,6 @@
 import { Heart, BookOpen, Users, ThumbsUp } from 'lucide-react';
 import Image from 'next/image';
-import Link from 'next/link';
+import AccentButton from './ui/accent-button';
 
 const focusAreas = [
   {
@@ -34,32 +34,27 @@ export default function FocusAreas() {
     <div className="w-full flex flex-col items-center justify-center gap-4">
       <div className="flex md:flex-row flex-col items-center justify-center md:gap-10 gap-4 max-w-6xl py-20 px-4">
         <div className="flex-1/2 flex flex-col md:items-start items-center justify-between gap-5 h-full">
-          <div className="flex flex-col md:items-start items-center gap-5">
-            <p className="md:text-left text-center px-4 py-1 rounded-full border border-gray-300 text-sm md:mb-8">
+          <div className="flex flex-col md:items-start items-center gap-6">
+            <p className="md:text-left text-center px-4 py-1 rounded-full border border-gray-300 text-sm">
               Our Focus Areas
             </p>
-            <h2 className="md:text-left text-center md:text-4xl text-3xl font-bold md:mb-4">
+            <h2 className="md:text-left text-center md:text-4xl text-3xl font-semibold">
               Serving Communities <br className="hidden md:block" />
               with Purpose and Care
             </h2>
-            <p className="md:text-left text-center max-w-2xl text-gray-600 md:mb-6">
-              At Council for Start-up India, we provide 360° support to help
-              entrepreneurs navigate every stage of their journey — from
-              ideation to global scale. Our programs, mentorship, and
-              infrastructure are designed to turn raw ideas into thriving,
-              sustainable ventures.
+            <p className="md:text-left text-center max-w-2xl text-justify">
+              <span className="font-semibold">Givinity Foundation</span>{' '}
+              addresses real challenges by providing access to education,
+              digital literacy, healthcare, and skill-building—helping
+              individuals, especially youth, become self-sustainable, confident,
+              and capable of contributing meaningfully to society.
             </p>
-            <Link
-              href="/coming-soon"
-              className="px-10 py-3 bg-accent hover:bg-red-500 transition-colors text-white hidden md:flex items-center justify-center gap-4 rounded-full"
-            >
-              <span className="w-2 h-2 bg-white rounded-full" /> Donate Now
-            </Link>
+            <AccentButton href="/coming-soon">Donate Now</AccentButton>
           </div>
 
-          <div className="relative flex-shrink-0 w-full h-[300px] rounded-2xl overflow-hidden md:mt-10">
+          <div className="relative flex-shrink-0 w-full h-[350px] rounded-2xl overflow-hidden md:mt-10">
             <Image
-              src="/about-us.jpg"
+              src="/focus-areas/focus-areas-image.jpg"
               alt="About Us"
               fill
               // width={320}

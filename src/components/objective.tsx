@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import AccentButton from './ui/accent-button';
 
 const Objectives = [
   {
@@ -25,6 +25,30 @@ const Objectives = [
       'Provide structured career counselling, mentorship, and test preparation services (e.g., for zero-tuition international programs) to empower youth to make informed academic and career choices.',
     color: '#f1f1f1',
   },
+  {
+    title: 'Deliver Healthcare & Wellness Services',
+    content:
+      'Organize blood donation camps, medical camps, healthcare support, distribute free medicines, and facilitate mental health support and telemedicine services for underserved populations to improve overall well-being.',
+    color: '#EFECFF',
+  },
+  {
+    title: 'Enable Digital Inclusion',
+    content:
+      'Deploy mobile classrooms, virtual platforms, and tech-enabled tools to bridge the digital divide in education and skill access.',
+    color: '#F0F9D4',
+  },
+  {
+    title: 'Foster Partnerships for Greater Impact',
+    content:
+      'Collaborate with government agencies, corporates (CSR), NGOs, and global networks to scale social impact in education, employment, and healthcare.',
+    color: '#E6C7E1',
+  },
+  {
+    title: 'Mobilize Resources for Sustainability',
+    content:
+      'Raise funds through grants, donations, and sponsorships to sustain and expand the Foundation’s programs, while ensuring full transparency and compliance.',
+    color: '#DDFEFF',
+  },
 ];
 const Objective = () => {
   return (
@@ -32,41 +56,61 @@ const Objective = () => {
       <div className="flex flex-col items-center justify-center gap-4 max-w-6xl py-20 px-4">
         <div className="flex md:flex-row flex-col md:items-center items-start justify-between w-full">
           <div className="flex flex-col items-start justify-start gap-2">
-            <h2 className="md:text-5xl text-3xl font-medium">
+            <h2 className="md:text-5xl text-3xl font-semibold">
               Core Objectives
             </h2>
-            <p className="max-w-sm text-gray-600 md:text-base text-sm">
+            <p className="max-w-sm text-gray-800 md:text-base text-sm">
               Driving sustainable change through education, healthcare, and
               community empowerment initiatives.
             </p>
           </div>
 
-          <Link
-            href="/coming-soon"
-            className="px-10 py-3 bg-accent hover:bg-red-500 transition-colors text-white hidden md:flex items-center justify-center gap-4 rounded-full"
+          <AccentButton className="md:block hidden" href="/coming-soon">
+            Contribute Now
+          </AccentButton>
+        </div>
+
+        {/* Mobile: 2x2 grid, Desktop: scrollable row */}
+        <div className="w-full mt-4">
+          {/* Mobile Grid */}
+          <div className="grid grid-cols-2 gap-4 md:hidden">
+            {Objectives.map((objective, index) => (
+              <div
+                style={{ backgroundColor: objective.color }}
+                key={objective.title}
+                className="p-4 rounded-xl flex flex-col items-start justify-start gap-4 h-full"
+              >
+                <p className="md:text-base text-sm font-semibold h-20 flex items-start">
+                  {objective.title}
+                </p>
+                <p className="text-xs font-normal">{objective.content}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Desktop Scrollable Row */}
+          <div
+            className="hidden md:flex overflow-x-auto gap-4 pb-4 scrollbar-hide"
+            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
-            <span className="w-2 h-2 bg-white rounded-full" /> Donate Now
-          </Link>
+            {Objectives.map((objective, index) => (
+              <div
+                style={{ backgroundColor: objective.color }}
+                key={objective.title}
+                className="p-4 rounded-xl flex flex-col items-start justify-start gap-4 min-w-[300px] max-w-[350px] h-auto flex-shrink-0"
+              >
+                <p className="text-lg font-semibold h-20 flex items-start">
+                  {objective.title}
+                </p>
+                <p className="text-sm">{objective.content}</p>
+              </div>
+            ))}
+          </div>
         </div>
 
-        <div className="w-full mt-4 md:flex md:justify-center md:gap-4 grid grid-cols-2 gap-4">
-          {Objectives.map((objective, index) => (
-            <div
-              style={{ backgroundColor: objective.color }}
-              key={objective.title}
-              className="p-4 rounded-xl flex flex-col items-start justify-start gap-4 h-full"
-            >
-              <p className="md:text-lg text-base font-semibold md:h-20 h-24 flex items-start">
-                {objective.title}
-              </p>
-              <p className="md:text-sm text-xs">{objective.content}</p>
-            </div>
-          ))}
-        </div>
-
-        <button className="px-10 py-3 bg-accent text-white flex md:hidden items-center justify-center gap-4 rounded-full mr-auto">
-          <span className="w-2 h-2 bg-white rounded-full" /> Donate Now
-        </button>
+        <AccentButton className="md:hidden block mr-auto" href="/coming-soon">
+          Contribute Now
+        </AccentButton>
       </div>
     </div>
   );

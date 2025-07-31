@@ -3,9 +3,9 @@
 import { Compass, Eye } from 'lucide-react';
 import Image from 'next/image';
 import { useState } from 'react';
+import { useAutoTabSwitch } from '../hooks/useAutoTabSwitch';
 
 const AboutUs = () => {
-  const [activeTab, setActiveTab] = useState(0);
   const [direction, setDirection] = useState(0);
 
   const divStyle = {
@@ -52,36 +52,22 @@ const AboutUs = () => {
         },
         {
           title: 'Spiritual Unity',
-          description: 'Prayers for everyone’s peace and well-being.',
+          description: "Prayers for everyone's peace and well-being.",
         },
       ],
     },
-    // {
-    //   id: 2,
-    //   title: 'Our Goals',
-    //   icon: ChartPie,
-    //   content: {
-    //     title: 'Our Goals',
-    //     description:
-    //       'To establish sustainable platforms that provide accessible education, create employment opportunities, offer mental health support, and foster spiritual growth. We aim to reach 1 million underserved individuals within the next 5 years through our technology-driven initiatives.',
-    //     image: '/about-us/vision.jpg',
-    //   },
-    //   subContent: [
-    //     {
-    //       title: 'Community Impact',
-    //       description: 'Transforming lives through education and support.',
-    //     },
-    //     {
-    //       title: 'Spiritual Solidarity',
-    //       description: 'Spreading peace through collective prayers.',
-    //     },
-    //   ],
-    // },
   ];
+
+  // Auto-tab switching hook
+  const { activeTab, switchToTab, isPaused } = useAutoTabSwitch({
+    totalTabs: tabs.length,
+    interval: 10000,
+    enabled: true,
+  });
 
   const handleTabClick = (tabId: number) => {
     setDirection(tabId > activeTab ? 1 : -1);
-    setActiveTab(tabId);
+    switchToTab(tabId);
   };
 
   const getSlideDirection = () => {
@@ -200,38 +186,6 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        .slide-in-right {
-          animation: slideInRight 0.5s ease-out;
-        }
-
-        .slide-in-left {
-          animation: slideInLeft 0.5s ease-out;
-        }
-
-        @keyframes slideInRight {
-          from {
-            opacity: 0;
-            transform: translateX(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-
-        @keyframes slideInLeft {
-          from {
-            opacity: 0;
-            transform: translateX(-30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-      `}</style>
     </div>
   );
 };

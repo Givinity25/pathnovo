@@ -2,8 +2,34 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import GivinityLogo from './logo';
+import { useIsMobile } from '@/hooks/useMediaQuery';
+import { useEffect, useRef } from 'react';
 
 const Hero = () => {
+  const isMobile = useIsMobile();
+  const scrollRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (!isMobile || !scrollRef.current) return;
+
+    const container = scrollRef.current;
+    const children = container.children;
+    let index = 0;
+
+    const scrollInterval = setInterval(() => {
+      if (!container) return;
+
+      index = (index + 1) % children.length;
+      const child = children[index] as HTMLElement;
+      container.scrollTo({
+        left: child.offsetLeft,
+        behavior: 'smooth',
+      });
+    }, 3000);
+
+    return () => clearInterval(scrollInterval);
+  }, [isMobile]);
+
   return (
     <div className="w-full flex flex-col items-center justify-center gap-4 bg-[#ff5758] text-white relative">
       <div className="flex flex-col items-center justify-center md:gap-4 gap-8 max-w-7xl w-full px-4 relative md:min-h-[700px] min-h-auto md:pt-0 pt-40 md:pb-20">
@@ -63,7 +89,10 @@ const Hero = () => {
           </div>
         </div>
         {/* Hero Images */}
-        <div className="w-full flex gap-4 overflow-x-auto pb-4 md:absolute -bottom-40 left-0 right-0 md:justify-center justify-start snap-x snap-mandatory">
+        <div
+          ref={scrollRef}
+          className="w-full flex gap-4 overflow-x-auto pb-4 md:absolute -bottom-40 left-0 right-0 md:justify-center justify-start snap-x snap-mandatory"
+        >
           <div className="flex-shrink-0 md:w-64 w-full h-[330px] rounded-2xl overflow-hidden snap-center">
             <Image
               src="/hero/hero-left.png"

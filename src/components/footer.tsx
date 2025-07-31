@@ -26,7 +26,7 @@ const Footer = () => {
             <p className="font-semibold">Givinity Foundation</p>
             <p>CIN 88900DL2025NPL451393</p>
             <p>Registered Office: 2, Madhuban, Delhi - 110092</p>
-            <p>Email: info@givinity.org</p>
+            <p>Email: mail@givinity.org</p>
           </div>
           <p>© Givinity. All Rights Reserved. Licensing</p>
         </div>

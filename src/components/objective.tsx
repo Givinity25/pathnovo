@@ -53,7 +53,7 @@ const Objectives = [
 const Objective = () => {
   return (
     <div className="w-full flex flex-col items-center justify-center gap-4">
-      <div className="flex flex-col items-center justify-center gap-4 max-w-6xl py-20 px-4">
+      <div className="flex flex-col items-center justify-center gap-4 max-w-6xl py-20 px-4 w-full">
         <div className="flex md:flex-row flex-col md:items-center items-start justify-between w-full">
           <div className="flex flex-col items-start justify-start gap-2">
             <h2 className="md:text-5xl text-3xl font-semibold">

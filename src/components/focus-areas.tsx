@@ -50,7 +50,7 @@ export default function FocusAreas() {
               individuals, especially youth, become self-sustainable, confident,
               and capable of contributing meaningfully to society.
             </p>
-            <AccentButton href={googleFormURL}>Donate Now</AccentButton>
+            <AccentButton href={googleFormURL}>Contribute Now</AccentButton>
           </div>
 
           <div className="relative flex-shrink-0 w-full h-[350px] rounded-2xl overflow-hidden md:mt-10">

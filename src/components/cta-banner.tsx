@@ -18,7 +18,7 @@ export default function CallToActionBanner() {
               them.
             </p>
             <div className="flex items-start">
-              <AccentButton href={googleFormURL}>Donate Now</AccentButton>
+              <AccentButton href={googleFormURL}>Contribute Now</AccentButton>
             </div>
           </div>
         </div>

@@ -27,7 +27,7 @@ const involvementOptions = [
     description:
       'Support a child’s education, sponsor a skilling program, or fund a health.',
     image: '/get-involved/joy-of-contributing.jpg',
-    cta: 'Donate Now',
+    cta: 'Contribute Now',
   },
 ];
 

@@ -1,3 +1,4 @@
+import { googleFormURL } from '@/constants/links';
 import Link from 'next/link';
 
 const Footer = () => {
@@ -13,7 +14,7 @@ const Footer = () => {
           partnership inquiries – reach out to us today.
         </p>
         <Link
-          href="/coming-soon"
+          href={googleFormURL}
           className="mt-6 px-10 py-3 bg-white text-black flex items-center justify-center gap-4 rounded-full cursor-pointer"
         >
           <span className="w-2 h-2 bg-black rounded-full" /> Contact Us

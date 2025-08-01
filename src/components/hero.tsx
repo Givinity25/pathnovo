@@ -4,6 +4,7 @@ import Link from 'next/link';
 import GivinityLogo from './logo';
 import { useIsMobile } from '@/hooks/useMediaQuery';
 import { useEffect, useRef } from 'react';
+import { googleFormURL } from '@/constants/links';
 
 const Hero = () => {
   const isMobile = useIsMobile();
@@ -66,7 +67,7 @@ const Hero = () => {
             <Link
               key={btn.label}
               className="md:text-base text-sm hover:bg-white hover:text-accent border border-white rounded-full md:px-14 px-4 md:py-3 py-2 flex items-center justify-center gap-2 transition-all duration-200 hover:shadow-lg cursor-pointer"
-              href="/coming-soon"
+              href={googleFormURL}
             >
               {btn.label}
             </Link>

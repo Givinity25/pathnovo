@@ -1,3 +1,4 @@
+import { googleFormURL } from '@/constants/links';
 import AccentButton from './ui/accent-button';
 
 export default function CallToActionBanner() {
@@ -17,7 +18,7 @@ export default function CallToActionBanner() {
               them.
             </p>
             <div className="flex items-start">
-              <AccentButton href="/coming-soon">Donate Now</AccentButton>
+              <AccentButton href={googleFormURL}>Donate Now</AccentButton>
             </div>
           </div>
         </div>

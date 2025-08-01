@@ -1,6 +1,7 @@
 'use client';
 import AccentButton from './ui/accent-button';
 import { useIsMobile } from '../hooks/useMediaQuery';
+import { googleFormURL } from '@/constants/links';
 
 const involvementOptions = [
   {
@@ -68,11 +69,11 @@ export default function GetInvolved() {
 
               {/* Example of conditional rendering based on screen size */}
               {isMobile ? (
-                <AccentButton href="/coming-soon" size="xs">
+                <AccentButton href={googleFormURL} size="xs">
                   {item.cta}
                 </AccentButton>
               ) : (
-                <AccentButton href="/coming-soon" size="sm">
+                <AccentButton href={googleFormURL} size="sm">
                   {item.cta}
                 </AccentButton>
               )}

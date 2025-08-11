@@ -11,10 +11,25 @@ export default function ContributePage() {
             Support Our Mission
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Your contribution helps us empower communities through education,
-            healthcare, and compassion-driven initiatives. Every donation makes
-            a difference.
+            A small contribution can create BIG impact. Your contribution helps
+            us empower communities through education, healthcare, and
+            compassion-driven initiatives. Every contribution makes a
+            difference.
           </p>
+        </div>
+
+        {/* QR Code Section */}
+        <div className="bg-white rounded-lg shadow-md p-6 border border-gray-200 mb-12">
+          <h2 className="text-2xl font-semibold text-gray-900 mb-4 flex items-center">
+            <span className="text-purple-600 mr-2">📱</span>
+            QR Code
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Scan the QR code below to make a quick UPI payment:
+          </p>
+          <div className="bg-gray-100 rounded-lg p-8 flex items-center justify-center">
+            <Image src="/qrcode.png" alt="QR Code" width={300} height={300} />
+          </div>
         </div>
 
         {/* Payment Options */}
@@ -101,20 +116,6 @@ export default function ContributePage() {
                 </p>
               </div>
             </div>
-          </div>
-        </div>
-
-        {/* QR Code Section */}
-        <div className="bg-white rounded-lg shadow-md p-6 border border-gray-200 mb-12">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-4 flex items-center">
-            <span className="text-purple-600 mr-2">📱</span>
-            QR Code
-          </h2>
-          <p className="text-gray-600 mb-4">
-            Scan the QR code below to make a quick UPI payment:
-          </p>
-          <div className="bg-gray-100 rounded-lg p-8 flex items-center justify-center">
-            <Image src="/qrcode.png" alt="QR Code" width={300} height={300} />
           </div>
         </div>
 

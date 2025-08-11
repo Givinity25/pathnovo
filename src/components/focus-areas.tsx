@@ -1,7 +1,6 @@
 import { Heart, BookOpen, Users, ThumbsUp } from 'lucide-react';
 import Image from 'next/image';
 import AccentButton from './ui/accent-button';
-import { googleFormURL } from '@/constants/links';
 
 const focusAreas = [
   {
@@ -50,7 +49,7 @@ export default function FocusAreas() {
               individuals, especially youth, become self-sustainable, confident,
               and capable of contributing meaningfully to society.
             </p>
-            <AccentButton href={googleFormURL}>Contribute Now</AccentButton>
+            <AccentButton href="/contribute">Contribute Now</AccentButton>
           </div>
 
           <div className="relative flex-shrink-0 w-full h-[350px] rounded-2xl overflow-hidden md:mt-10">

@@ -60,14 +60,14 @@ const Hero = () => {
         </p>
         <div className="flex items-center justify-center md:gap-4 gap-2 relative">
           {[
-            { label: '● Join Us' },
-            { label: '● Volunteer' },
-            { label: '● Contribute' },
+            { label: '● Join Us', href: googleFormURL },
+            { label: '● Volunteer', href: googleFormURL },
+            { label: '● Contribute', href: '/contribute' },
           ].map((btn, idx) => (
             <Link
               key={btn.label}
               className="md:text-base text-sm hover:bg-white hover:text-accent border border-white rounded-full md:px-14 px-4 md:py-3 py-2 flex items-center justify-center gap-2 transition-all duration-200 hover:shadow-lg cursor-pointer"
-              href={googleFormURL}
+              href={btn.href}
             >
               {btn.label}
             </Link>

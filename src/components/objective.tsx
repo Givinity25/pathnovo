@@ -1,4 +1,3 @@
-import { googleFormURL } from '@/constants/links';
 import AccentButton from './ui/accent-button';
 
 const Objectives = [
@@ -66,7 +65,7 @@ const Objective = () => {
             </p>
           </div>
 
-          <AccentButton className="md:block hidden" href={googleFormURL}>
+          <AccentButton className="md:block hidden" href="/contribute">
             Contribute Now
           </AccentButton>
         </div>
@@ -109,7 +108,7 @@ const Objective = () => {
           </div>
         </div>
 
-        <AccentButton className="md:hidden block mr-auto" href={googleFormURL}>
+        <AccentButton className="md:hidden block mr-auto" href="/contribute">
           Contribute Now
         </AccentButton>
       </div>

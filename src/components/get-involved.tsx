@@ -9,25 +9,29 @@ const involvementOptions = [
     description: 'Teach, mentor, or support community outreach.',
     image: '/get-involved/volunteer.jpg',
     cta: 'Volunteer',
+    url: googleFormURL,
   },
   {
     title: 'Internships',
     description: 'Join our operations, communications, or fundraising teams.',
     image: '/get-involved/internships.jpg',
     cta: 'Apply Now',
+    url: googleFormURL,
   },
   {
     title: 'Partner with Us',
     description: 'Schools, NGOs, and CSR teams welcome!',
     image: '/get-involved/partner-with-us.png',
     cta: 'Partner With Us',
+    url: googleFormURL,
   },
   {
-    title: 'Joy of Contributing',
+    title: 'Joy of Contributing',
     description:
-      'Support a child’s education, sponsor a skilling program, or fund a health.',
+      "Support a child's education, sponsor a skilling program, or fund a health.",
     image: '/get-involved/joy-of-contributing.jpg',
     cta: 'Contribute Now',
+    url: '/contribute',
   },
 ];
 
@@ -69,11 +73,11 @@ export default function GetInvolved() {
 
               {/* Example of conditional rendering based on screen size */}
               {isMobile ? (
-                <AccentButton href={googleFormURL} size="xs">
+                <AccentButton href={item.url} size="xs">
                   {item.cta}
                 </AccentButton>
               ) : (
-                <AccentButton href={googleFormURL} size="sm">
+                <AccentButton href={item.url} size="sm">
                   {item.cta}
                 </AccentButton>
               )}

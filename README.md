@@ -1,4 +1,4 @@
-# Pathnovo - Empowering Youth, Enabling Change
+# Pathnovo - Empowering Youth, Enabling Change.
 
 A modern, responsive landing page for Pathnovo, an organization dedicated to empowering youth and creating positive change through education, healthcare support, and community development.
 

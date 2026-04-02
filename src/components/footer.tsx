@@ -18,7 +18,7 @@ const Footer = () => {
             inquiries.
           </p>
           <a
-            href="mailto:mail@givinity.org"
+            href="mailto:givinityfoundation@gmail.com"
             className="inline-flex items-center gap-2 bg-white text-[#1F3C88] font-semibold px-8 py-3 rounded-full text-sm hover:bg-[#E5B84B] hover:text-white transition-colors duration-200"
           >
             <span className="w-2 h-2 bg-[#1F3C88] rounded-full" />
@@ -80,10 +80,10 @@ const Footer = () => {
               Contact
             </p>
             <a
-              href="mailto:mail@givinity.org"
+              href="mailto:givinityfoundation@gmail.com"
               className="text-sm text-white/70 hover:text-white transition-colors"
             >
-              mail@givinity.org
+              givinityfoundation@gmail.com
             </a>
             <p className="text-sm text-white/70">
               2, Madhuban, Delhi - 110092

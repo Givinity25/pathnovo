@@ -1,6 +1,7 @@
 import { Heart, BookOpen, Users, ThumbsUp } from 'lucide-react';
 import Image from 'next/image';
 import AccentButton from './ui/accent-button';
+import { googleFormURL } from '@/constants/links';
 
 const focusAreas = [
   {

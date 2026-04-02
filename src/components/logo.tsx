@@ -4,13 +4,13 @@ const GivinityLogo = () => {
   return (
     <div>
       <Image
-        src="/logo.png"
+        src="/givinity_logo.png"
         alt="Givinity Logo"
-        width={58}
-        height={58}
-        className="w-10 h-10 md:w-[58px] md:h-[58px]"
+        width={80}
+        height={80}
+        // className=" md:w-[58px] md:h-[58px]"
       />
-      <h1 className="mt-2 uppercase font-bold text-xs md:text-sm">Givinity</h1>
+      {/* <h1 className="mt-2 uppercase font-bold text-xs md:text-sm">Givinity</h1> */}
     </div>
   );
 };

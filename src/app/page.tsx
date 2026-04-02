@@ -1,20 +1,24 @@
-import AboutUs from '@/components/about-us';
-import CallToActionBanner from '@/components/cta-banner';
-import FocusAreas from '@/components/focus-areas';
-import Footer from '@/components/footer';
-import GetInvolved from '@/components/get-involved';
+import Navbar from '@/components/navbar';
 import Hero from '@/components/hero';
-import Objective from '@/components/objective';
+import OurPurpose from '@/components/our-purpose';
+import Initiatives from '@/components/initiatives';
+import OurApproach from '@/components/our-approach';
+import VisionImpact from '@/components/vision-impact';
+import GetInvolved from '@/components/get-involved';
+import Partnerships from '@/components/partnerships';
+import Footer from '@/components/footer';
 
 export default function Home() {
   return (
     <div className="w-full h-full">
+      <Navbar />
       <Hero />
-      <AboutUs />
-      <Objective />
-      <FocusAreas />
+      <OurPurpose />
+      <Initiatives />
+      <OurApproach />
+      <VisionImpact />
       <GetInvolved />
-      <CallToActionBanner />
+      <Partnerships />
       <Footer />
     </div>
   );

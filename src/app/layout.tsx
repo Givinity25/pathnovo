@@ -1,19 +1,24 @@
 import type { Metadata } from 'next';
-import { Raleway, Petrona } from 'next/font/google';
+import { Inter, Poppins } from 'next/font/google';
 import './globals.css';
 
-const raleway = Raleway({
-  variable: '--font-raleway',
+const inter = Inter({
+  variable: '--font-inter',
   subsets: ['latin'],
+  display: 'swap',
 });
 
-const petrona = Petrona({
-  variable: '--font-petrona',
+const poppins = Poppins({
+  variable: '--font-poppins',
   subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  display: 'swap',
 });
+
 export const metadata: Metadata = {
   title: 'Givinity Foundation',
-  description: 'Givinity Foundation',
+  description:
+    'Givinity Foundation is working to address critical human challenges — global harmony, youth opportunity, and healthcare access.',
 };
 
 export default function RootLayout({
@@ -23,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${raleway.variable} ${petrona.variable} antialiased`}>
+      <body className={`${inter.variable} ${poppins.variable} antialiased`}>
         {children}
       </body>
     </html>

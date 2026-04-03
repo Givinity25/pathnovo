@@ -66,7 +66,7 @@ const Hero = () => {
         </div>
 
         {/* Hero Images */}
-        <div
+        {/* <div
           ref={scrollRef}
           className="w-full flex gap-4 overflow-x-auto pb-2 mt-8 md:justify-center justify-start snap-x snap-mandatory scrollbar-hide"
         >
@@ -97,7 +97,7 @@ const Hero = () => {
               className="w-full h-full object-cover"
             />
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

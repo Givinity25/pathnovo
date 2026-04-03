@@ -5,7 +5,7 @@ import { ExternalLink } from 'lucide-react';
 const initiatives = [
   {
     logo: '/1EarthHarmony.png',
-    emoji: '🌍',
+    bgImage: '/1earth.avif',
     name: '1Earth Harmony',
     tagline: 'Global Harmony Initiative',
     description:
@@ -17,7 +17,7 @@ const initiatives = [
   },
   {
     logo: '/cegy_logo.png',
-    emoji: '🎓',
+    bgImage: '/hero-center.avif',
     name: 'CEGY',
     tagline: 'Career & Education Guidance for Youth',
     description:
@@ -29,7 +29,7 @@ const initiatives = [
   },
   {
     logo: '/medical_logo.png',
-    emoji: '🏥',
+    bgImage: '/hero-left.avif',
     name: 'Medikal',
     tagline: 'Health Access & Support Platform',
     description:
@@ -80,28 +80,30 @@ const Initiatives = () => {
                 idx % 2 === 1 ? 'md:flex-row-reverse' : ''
               } gap-8 bg-gray-50 rounded-3xl overflow-hidden border border-gray-100 shadow-sm`}
             >
-              {/* Logo panel */}
-              <div
-                className="flex items-center justify-center md:w-56 w-full py-12 md:py-0 flex-shrink-0"
-                style={{ backgroundColor: initiative.accent + '15' }}
-              >
-                <div className="relative w-30 h-30">
-                  <Image
-                    src={initiative.logo}
-                    alt={initiative.name}
-                    fill
-                    className="object-contain"
-                  />
-                </div>
+              {/* Background image panel */}
+              <div className="relative md:w-76 w-full h-48 md:h-auto flex-shrink-0 overflow-hidden">
+                <Image
+                  src={initiative.bgImage}
+                  alt={initiative.name}
+                  fill
+                  className="object-cover"
+                />
               </div>
 
               {/* Content */}
-              <div className="flex flex-col justify-center gap-4 p-6 md:p-8 flex-1">
+              <div className="flex flex-col justify-center gap-4 p-4 md:p-6 flex-1">
                 <div className="flex flex-wrap items-center gap-3">
-                  <span className="text-2xl">{initiative.emoji}</span>
-                  <h3 className="font-heading font-bold text-2xl text-gray-900">
+                  <div className="relative w-30 h-20 flex-shrink-0">
+                    <Image
+                      src={initiative.logo}
+                      alt={initiative.name}
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                  {/* <h3 className="font-heading font-bold text-2xl text-gray-900">
                     {initiative.name}
-                  </h3>
+                  </h3> */}
                   <span
                     className={`text-xs font-medium px-3 py-1 rounded-full border ${statusStyle[initiative.status]}`}
                   >

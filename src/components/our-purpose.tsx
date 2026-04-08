@@ -43,7 +43,7 @@ const OurPurpose = () => {
             approach to achieving sustainable development for all. With special
             focus on <strong>&lsquo;Good Health and Well-being&rsquo;</strong> to ensure healthy lives and
             promote well-being for all at all ages; and &lsquo;Quality Education&rsquo; to
-            ensure inclusive and equitable quality education and promote lifelong
+            ensure inclusive and equitable <strong>Quality Education</strong> and promote lifelong
             learning opportunities for all.
           </p>
         </div>

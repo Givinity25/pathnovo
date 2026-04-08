@@ -36,6 +36,16 @@ const OurPurpose = () => {
             challenges and create pathways toward a more inclusive and
             harmonious future.
           </p>
+          <p>
+            Givinity Foundation is aligned with the United Nations&rsquo; adopted 2030
+            Agenda for <strong>Sustainable Development Goals (SDGs)</strong>, following the vital
+            principle of &ldquo;leaving no one behind&rdquo;, and emphasizes a holistic
+            approach to achieving sustainable development for all. With special
+            focus on <strong>&lsquo;Good Health and Well-being&rsquo;</strong> to ensure healthy lives and
+            promote well-being for all at all ages; and &lsquo;Quality Education&rsquo; to
+            ensure inclusive and equitable quality education and promote lifelong
+            learning opportunities for all.
+          </p>
         </div>
 
         {/* Stat highlights */}

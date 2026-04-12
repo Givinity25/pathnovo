@@ -1,3 +1,5 @@
+import InstitutionalTrust from "./InstitutionalTrust";
+
 const sectors = ['NGOs', 'Universities', 'CSR', 'Healthcare', 'Technology'];
 
 const Partnerships = () => {
@@ -27,9 +29,10 @@ const Partnerships = () => {
         </div>
 
         {/* Future logos placeholder */}
-        <p className="text-center text-gray-400 text-xs mt-8 italic">
+        {/* <p className="text-center text-gray-400 text-xs mt-8 italic">
           Partner logos will appear here as collaborations grow.
-        </p>
+        </p> */}
+        <InstitutionalTrust />
       </div>
     </section>
   );
